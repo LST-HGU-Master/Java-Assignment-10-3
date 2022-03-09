@@ -1,13 +1,11 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import java.io.*;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-public class HelloTest {
+public class ProgA3Test {
 
     @Test
-    public void testHelloWorld()
+    public void testMain()
     {
         PrintStream originalOut = System.out;
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -19,10 +17,13 @@ public class HelloTest {
         // action
         // in.inputln("2"); // 標準入力をテストする場合
         // Hello.main(new String[]{"1", "2", "3"}); // 実行時引数をテストする場合
-        Hello.main(null);
+        ProgA3.main(new String[]{"12"});
 
         // assertion
-        assertEquals("Hello world!\n", bos.toString());
+        String[] prints = bos.toString().split("\n");
+        assertEquals(2*12, prints.length);
+        assertEquals("工太はスライムAに攻撃した！", prints[0]);
+        assertEquals("工太はスライムLに攻撃した！", prints[prints.length - 2]);
 
         // undo the binding in System
         System.setOut(originalOut);

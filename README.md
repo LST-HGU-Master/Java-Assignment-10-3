@@ -1,14 +1,25 @@
-# Autograding Example: Java
-This example project is written in Java, and tested with Gradle/JUnit.
+# 課題 10-3: クラスと配列
 
-### The assignment
-The tests are currently failing because of an output mismatch. Fixing the `System.out.println` in the main method will make the tests green.
+### 課題の説明
+勇者クラスに全体攻撃をおこなう以下のメソッドを追加し、
+実行例にあわせてmainメソッドを作成しなさい。
 
-### Setup command
-N/A
+| メソッド名     | 引数のリスト | 戻り値 | 処理内容 |
+|-----------|--------------|--------|----------|
+| attackAll | Slime[] slimes | なし | 全てのスライムに5のダメージを与える |
 
-### Run command
-`gradle test`
+ただし、スライムの数は1から26までの数値を実行時引数として与えること。
 
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
+### 実行例
+```
+工太はスライムAに攻撃した！
+敵に５ポイントのダメージをあたえた！
+工太はスライムBに攻撃した！
+敵に５ポイントのダメージをあたえた！
+工太はスライムCに攻撃した！
+敵に５ポイントのダメージをあたえた！
+工太はスライムDに攻撃した！
+敵に５ポイントのダメージをあたえた！
+工太はスライムEに攻撃した！
+敵に５ポイントのダメージをあたえた！
+```
