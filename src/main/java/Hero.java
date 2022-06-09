@@ -6,7 +6,7 @@ public class Hero
     public void attack(Slime m) //戦う
     {
         System.out.println(this.name + "はスライム" + m.suffix + "に攻撃した！");
-        System.out.println("敵に５ポイントのダメージをあたえた！");
+        System.out.println("敵に5ポイントのダメージをあたえた！");
         m.hp -= 5;
     }
 }
