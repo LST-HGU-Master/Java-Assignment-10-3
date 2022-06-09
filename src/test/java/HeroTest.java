@@ -1,7 +1,9 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import java.io.*;
-
+/**
+ * @version (20220609)
+ **/
 public class HeroTest {
     @Test
     public void testAttackAll()
@@ -20,7 +22,7 @@ public class HeroTest {
         // assertion
         for (Slime s: slimes)
         {
-            assertEquals(13, s.hp);
+            assertEquals(13, s.hp,"attackAllメソッドの実行によるスライム" + s.suffix +"のhpの変化量が不正です!");
         }
 
     }
