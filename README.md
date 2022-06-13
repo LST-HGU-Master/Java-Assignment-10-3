@@ -10,6 +10,44 @@
 
 ただし、スライムの数は1から26までの数値を実行時引数として与えること。
 
+### Heroクラス (メソッドを追加する)
+```java
+public class Hero
+{
+    String name = "工太";
+    int hp=100;
+
+    public void attack(Slime m) //戦う
+    {
+        System.out.println(this.name + "はスライム" + m.suffix + "に攻撃した！");
+        System.out.println("敵に5ポイントのダメージをあたえた！");
+        m.hp -= 5;
+    }
+}
+```
+
+### Slimeクラス (変更・提出不要)
+```java
+public class Slime
+{
+    int hp = 18;
+    char suffix;
+
+    Slime(char suffx){
+        this.suffix = suffx;
+    }
+
+    public void attack(Hero h)
+    {
+        int damage = 5;
+
+        System.out.println("スライム" + this.suffix + "の攻撃！");
+        h.hp -= damage;
+        System.out.println( damage + "のダメージでHPが" + h.hp + "になった");
+    }
+}
+```
+
 ### 実行例 （実行時引数を　　5　　とした場合）
 ```
 工太はスライムAに攻撃した！
