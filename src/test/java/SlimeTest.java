@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SlimeTest
 {
     @Test
-    public void testPrivate() {
+    public void testStatic() {
         try{
             // action
             Slime slm = new Slime('0');
